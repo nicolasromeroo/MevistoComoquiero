@@ -717,6 +717,11 @@ button[type=submit] {
     flex-direction: column;
     align-items: center;
   }
+  /* PAGINA NOSOTROS */
+  .wallpaperNosotros {
+    position: relative;
+    top: 50px;
+  }
   .footer-container {
     width: 100%;
     display: flex;
