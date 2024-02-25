@@ -3,11 +3,13 @@
 
 .carouselPrincipalContainer {
     display: flex;
+    z-index: 2;
 }
 
 .carousel {
     width: 100%;
     height: auto;
+    z-index: 0;
 
     &-item img {
         width: 100%;
@@ -81,7 +83,7 @@
     }
 
     iframe {
-        width: 400px;
+        width: 50%;
         height: 400px;
     }
 }
