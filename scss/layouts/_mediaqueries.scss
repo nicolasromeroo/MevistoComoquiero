@@ -107,6 +107,13 @@
         .title_contactanos {
             padding-top: 100px;
         }
+
+        /* PAGINA CATALOGO */
+    
+        .container-gridsys {
+            padding-top: 50px;
+            
+        }
     }
     
     
@@ -238,6 +245,14 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .container-gridsys {
+        padding-top: 200px;
+    }
+
+    .container-gridsys h2 {
+        display: none;
     }
 } 
 

@@ -699,6 +699,10 @@ button[type=submit] {
   .title_contactanos {
     padding-top: 100px;
   }
+  /* PAGINA CATALOGO */
+  .container-gridsys {
+    padding-top: 50px;
+  }
 }
 @media (max-width: 768px) {
   #galeria {
@@ -800,6 +804,12 @@ button[type=submit] {
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  .container-gridsys {
+    padding-top: 200px;
+  }
+  .container-gridsys h2 {
+    display: none;
   }
 }
 
