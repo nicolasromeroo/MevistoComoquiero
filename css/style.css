@@ -660,8 +660,22 @@ button[type=submit] {
   /* RESPONSIVE PROMOCIONES */
 }
 @media (max-width: 768px) and (max-width: 568px) {
-  .sectionMultimedia .containerSpotify iframe {
-    display: none;
+  .sectionMultimedia iframe {
+    width: 350px;
+    height: 250px;
+  }
+  nav {
+    width: 100%;
+  }
+  nav .container-fluid img {
+    position: relative;
+    left: 140%;
+    bottom: 30px;
+  }
+  /* PAGINA NOSOTROS */
+  .wallpaperNosotros {
+    position: relative;
+    top: 50px;
   }
 }
 @media (max-width: 768px) {
