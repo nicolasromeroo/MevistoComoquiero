@@ -636,6 +636,7 @@ button[type=submit] {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .carousel {
     align-self: center;
@@ -643,8 +644,9 @@ button[type=submit] {
   .carousel-control-next-icon {
     z-index: 1;
   }
-  .container-content {
-    display: none;
+  .container-content-catalogo button {
+    position: relative;
+    left: 110px;
   }
   .sectionCaracter {
     flex-direction: column;
@@ -672,10 +674,30 @@ button[type=submit] {
     left: 140%;
     bottom: 30px;
   }
+  .container-content {
+    display: block;
+    width: 100%;
+  }
+  .container-content img {
+    width: 270px;
+    height: 100%;
+  }
+  .container-content button {
+    position: relative;
+    top: -100px;
+    left: 100px;
+  }
+  .sectionCaracter {
+    margin-top: -280px;
+  }
   /* PAGINA NOSOTROS */
   .wallpaperNosotros {
     position: relative;
     top: 50px;
+  }
+  /* PAGINA CONTACTANOS */
+  .title_contactanos {
+    padding-top: 100px;
   }
 }
 @media (max-width: 768px) {
@@ -702,7 +724,7 @@ button[type=submit] {
     flex-direction: column;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   /* RESPONSIVE INDEX */
   nav {
     width: 100%;
@@ -719,6 +741,7 @@ button[type=submit] {
   .carouselPrincipalContainer {
     width: 100%;
     display: flex;
+    flex-direction: column;
   }
   .carousel {
     align-self: center;
@@ -727,7 +750,25 @@ button[type=submit] {
     width: 100% !important;
   }
   .container-content {
+    position: absolute;
+  }
+  .container-content img {
     display: none;
+  }
+  .container-content button {
+    background-color: rgb(200, 255, 0);
+    width: 70px;
+    height: 30px;
+    position: fixed;
+    top: 350px;
+    left: 0;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+  }
+  .sectionCaracter {
+    margin-top: 0;
   }
   .sectionMultimedia {
     flex-direction: column;
