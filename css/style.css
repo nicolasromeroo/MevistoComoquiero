@@ -232,6 +232,10 @@ button[type=submit] {
   cursor: pointer;
 }
 
+.row {
+  margin-bottom: 20px;
+}
+
 /* PAGINA PROMOCIONES */
 .bodyWallpaper {
   background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.637)), url(/img/vintage8.jpg);
@@ -747,14 +751,11 @@ button[type=submit] {
     display: flex;
     flex-direction: column;
   }
-  .carousel {
-    align-self: center;
-  }
   .carousel img {
     width: 100% !important;
   }
   .container-content {
-    position: absolute;
+    position: relative;
   }
   .container-content img {
     display: none;

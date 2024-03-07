@@ -174,17 +174,15 @@
         flex-direction: column;
     
     }
+
     
-    .carousel {
-        align-self: center;
-        }
 
     .carousel img {
         width: 100% !important;
     }
 
     .container-content {
-        position: absolute;
+        position: relative;
     }
 
     .container-content img {
