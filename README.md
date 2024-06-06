@@ -1,4 +1,5 @@
-Segunda pre-entrega, con 5 archivos html, flex en todos, y adaptado a responsive con Grid System y media queries.
+Web responsive de tienda de ropa "Me visto como quiero"
+Contiene: 5 archivos html, flex en todos, y adaptado a responsive con Grid System y media queries.
 Utilicé Bootstrap para grid, navbar, y carousel.
 Los HTML responsive son los de "index.html" y "productos.html"
 Activé GitHub Pages para los desplazamientos.
