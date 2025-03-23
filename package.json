@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nicolasromeroo/PreEntrega2-Romero/issues"
   },
-  "homepage": "https://github.com/nicolasromeroo/PreEntrega2-Romero#readme"
+  "homepage": "https://github.com/nicolasromeroo/PreEntrega2-Romero#readme",
+  "dependencies": {
+    "typed.js": "^2.1.0"
+  }
 }

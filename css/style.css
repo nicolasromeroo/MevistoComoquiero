@@ -236,6 +236,10 @@ button[type=submit] {
   margin-bottom: 20px;
 }
 
+.typed {
+  background-color: #7c1c19 ;
+}
+
 /* PAGINA PROMOCIONES */
 .bodyWallpaper {
   background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.637)), url(/img/vintage8.jpg);
