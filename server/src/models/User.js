@@ -5,16 +5,19 @@ const userCollection = "users"
 
 const userSchema = new Schema({
     username: {
-        type: string,
+        type: String,
         required: true,
     },
     email: {
-        type: string,
+        type: String,
         required: true,
     },
-    password: string
+    password: {
+        type: String,
+        required: true,
+    }
 })
 
-const User = Schema(userCollection, userSchema)
+const User = mongoose.model("User", userSchema, userCollection)
 
 export default User
