@@ -1,0 +1,35 @@
+.promo-marquee {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e1ff00;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.promo-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.promo-track span {
+    white-space: nowrap;
+    margin-right: 50px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

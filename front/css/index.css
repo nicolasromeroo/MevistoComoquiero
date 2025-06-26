@@ -1,0 +1,33 @@
+.destacados-section {
+    background-color: #fdfdfd;
+}
+
+.destacados-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.destacados-subtitle {
+    font-size: 1rem;
+    color: #666;
+}
+
+.destacados-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: transform 0.3s ease;
+}
+
+.destacados-card:hover img {
+    transform: scale(1.05);
+}
+
+.destacados-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.destacados-card .btn {
+    margin-top: 0.5rem;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/tira-anuncio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/68c5d14b35.js" crossorigin="anonymous"></script>
+    <title>Productos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-3 contenedor-estilos-nav">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="../img/mvcqSinfondo.png" alt="Logo" class="logo-navbar me-2">
+                    <span class="fw-bold text-dark">Mi Tienda</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 active" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="contactanos.html">Contacto</a>
+                        </li>
+
+                        <div id="authNav" class="d-flex">
+                            <li class="nav-item">
+                                <a class="btn btn-outline-dark me-2" href="login.html">Iniciar sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-dark" href="register.html">Registrarse</a>
+                            </li>
+                        </div>
+
+                        <div id="userNav" class="d-none">
+                            <li id="adminPanelItem" class="nav-item d-none">
+                                <a class="nav-link px-3" href="admin-panel.html">
+                                    <i class="fas fa-tachometer-alt me-1"></i>Panel
+                                </a>
+                            </li>
+
+                            <li class="nav-item position-relative">
+                                <a class="nav-link px-3" href="carrito.html">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://ui-avatars.com/api/?name=Usuario&background=0D8ABC&color=fff"
+                                        alt="Usuario" class="rounded-circle me-1" width="32" height="32">
+                                    <span id="usernameSpan">Usuario</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="perfil.html"><i class="fas fa-user me-2"></i>Mi
+                                            perfil</a></li>
+                                    <li><a class="dropdown-item" href="mis-pedidos.html"><i
+                                                class="fas fa-box me-2"></i>Mis pedidos</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#" onclick="logout()"><i
+                                                class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="promo-marquee">
+            <div class="promo-track">
+                <span>💥 15% de descuento llevando 3 o más prendas 💥</span>
+                <span>💥 15% de descuento llevando 3 o más prendas 💥</span>
+                <span>💥 15% de descuento llevando 3 o más prendas 💥</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-5 mt-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Productos</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="filtros-container">
+                        <h3 class="filtros-titulo">Filtrar por</h3>
+
+                        <div class="filtro-grupo">
+                            <h4 data-bs-toggle="collapse" href="#categorias" role="button" aria-expanded="true">
+                                Categorías
+                                <i class="fas fa-chevron-down"></i>
+                            </h4>
+                            <div class="collapse show" id="categorias">
+                                <div class="filtro-opciones">
+                                    <div class="filtro-opcion">
+                                        <input type="checkbox" id="cat-remeras" class="filtro-categoria">
+                                        <label for="cat-remeras">Remeras</label>
+                                    </div>
+                                    <div class="filtro-opcion">
+                                        <input type="checkbox" id="cat-camisas" class="filtro-categoria">
+                                        <label for="cat-camisas">Camisas</label>
+                                    </div>
+                                    <div class="filtro-opcion">
+                                        <input type="checkbox" id="cat-jeans" class="filtro-categoria">
+                                        <label for="cat-jeans">Jeans</label>
+                                    </div>
+                                    <div class="filtro-opcion">
+                                        <input type="checkbox" id="cat-vestidos" class="filtro-categoria">
+                                        <label for="cat-vestidos">Vestidos</label>
+                                    </div>
+                                    <div class="filtro-opcion">
+                                        <input type="checkbox" id="cat-abrigos" class="filtro-categoria">
+                                        <label for="cat-abrigos">Abrigos</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filtro-grupo">
+                            <h4 data-bs-toggle="collapse" href="#tallas" role="button" aria-expanded="true">
+                                Tallas
+                                <i class="fas fa-chevron-down"></i>
+                            </h4>
+                            <div class="collapse show" id="tallas">
+                                <div class="filtro-opciones d-flex flex-wrap gap-2">
+                                    <button class="btn btn-outline-dark btn-sm">XS</button>
+                                    <button class="btn btn-outline-dark btn-sm">S</button>
+                                    <button class="btn btn-outline-dark btn-sm active">M</button>
+                                    <button class="btn btn-outline-dark btn-sm">L</button>
+                                    <button class="btn btn-outline-dark btn-sm">XL</button>
+                                    <button class="btn btn-outline-dark btn-sm">XXL</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filtro-grupo">
+                            <h4 data-bs-toggle="collapse" href="#precio" role="button" aria-expanded="true">
+                                Rango de precios
+                                <i class="fas fa-chevron-down"></i>
+                            </h4>
+                            <div class="collapse show" id="precio">
+                                <div class="px-3 py-2">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span id="precio-min">$0</span>
+                                        <span id="precio-max">$50,000</span>
+                                    </div>
+                                    <input type="range" class="form-range" min="0" max="50000" step="1000"
+                                        id="rango-precio">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filtro-grupo">
+                            <h4 data-bs-toggle="collapse" href="#colores" role="button" aria-expanded="true">
+                                Colores
+                                <i class="fas fa-chevron-down"></i>
+                            </h4>
+                            <div class="collapse show" id="colores">
+                                <div class="filtro-opciones d-flex flex-wrap gap-2">
+                                    <button class="btn-color" style="background-color: #000000;" title="Negro"></button>
+                                    <button class="btn-color" style="background-color: #ffffff; border: 1px solid #ddd;"
+                                        title="Blanco"></button>
+                                    <button class="btn-color" style="background-color: #808080;" title="Gris"></button>
+                                    <button class="btn-color" style="background-color: #FF0000;" title="Rojo"></button>
+                                    <button class="btn-color" style="background-color: #0000FF;" title="Azul"></button>
+                                    <button class="btn-color" style="background-color: #90EE90;" title="Verde"></button>
+                                    <button class="btn-color" style="background-color: #FFA500;"
+                                        title="Naranja"></button>
+                                    <button class="btn-color" style="background-color: #800080;"
+                                        title="Violeta"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-dark w-100 mt-3" id="aplicar-filtros">Aplicar filtros</button>
+                        <button class="btn btn-link w-100 mt-2" id="limpiar-filtros">Limpiar filtros</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-8">
+                    <div class="productos-header">
+                        <h1 class="h4 mb-0">Productos</h1>
+                        <div class="ordenar-por">
+                            <span>Ordenar por:</span>
+                            <select class="form-select form-select-sm" id="ordenar">
+                                <option value="mas-relevantes">Más relevantes</option>
+                                <option value="precio-asc">Menor precio</option>
+                                <option value="precio-desc">Mayor precio</option>
+                                <option value="novedades">Novedades</option>
+                                <option value="mas-vendidos">Más vendidos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="productos-grid" id="productsList">
+                    </div>
+
+                    <nav aria-label="Navegación de productos" class="mt-5">
+                        <ul class="pagination justify-content-center" id="pagination">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-bordo text-white py-5">
+        <section class="container text-center">
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <h3 class="mb-3">Suscríbete para estar actualizado</h3>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Ingresa tu email" required>
+                            <button class="btn btn-danger" type="submit">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="mb-3">Síguenos en redes sociales</h3>
+                    <ul class="social-media-links list-unstyled d-flex justify-content-center gap-3">
+                        <li><a href="https://www.facebook.com/noelia.lenardon?mibextid=ZbWKwL" target="_blank"
+                                class="text-white fs-3"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" class="text-white fs-3"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/mevistocomoquiero_ropafemenina/?hl=es-la" target="_blank"
+                                class="text-white fs-3"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="text-white fs-3"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </footer>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/nav-bar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../js/auth.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</body>
+
+</html>

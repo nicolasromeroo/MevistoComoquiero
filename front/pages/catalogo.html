@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/68c5d14b35.js" crossorigin="anonymous"></script>
+  <title>Catálogo</title>
+</head>
+
+<body>
+  <button id="btn-new-catalog" onclick="toggleCatalogForm()">Nuevo catálogo</button>
+
+  <div id="catalog-form-container" style="display:none; margin-top:1rem;">
+    <form id="catalog-form">
+      <input name="title" placeholder="Título" required />
+      <input name="bannerImage" placeholder="URL de imagen" required />
+      <textarea name="description" placeholder="Descripción" required></textarea>
+      <button type="submit">Crear catálogo</button>
+    </form>
+  </div>
+
+  <div id="catalog-container" style="margin-top:2rem;"></div>
+
+  <footer class="objeto-de-color-bordo">
+    <section class="footer-container">
+
+      <div class="form-container">
+        <h3>Suscríbete para estar actualizado</h3>
+        <form>
+          <input type="email" placeholder="Ingresa tu email" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <div class="social-media-container">
+        <h3>Síguenos en redes sociales</h3>
+        <ul class="social-media-links">
+          <li><a href="https://www.facebook.com/noelia.lenardon?mibextid=ZbWKwL" target="_blank"><i
+                class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/mevistocomoquiero_ropafemenina/?hl=es-la" target="_blank"><i
+                class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+
+    </section>
+  </footer>
+
+  <script src="../js/catalogo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
