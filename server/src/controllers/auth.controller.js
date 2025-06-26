@@ -1,7 +1,7 @@
 
 import { userDao } from "../dao/user.dao.js";
 import { generateToken } from "../utils/jwt.js";
-import bcrypt from "bcryptjs"
+import bcrypt from "bcrypt"
 
 export const register = async (req, res) => {
     const { username, email, password, role } = req.body
