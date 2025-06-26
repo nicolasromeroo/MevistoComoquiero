@@ -1,5 +1,6 @@
 
 import { cartDao } from "../dao/cart.dao.js"
+import { productDao } from "../dao/product.dao.js"
 
 export const getCarts = async (req, res) => {
     try {
@@ -39,32 +40,36 @@ export const createCart = async (req, res) => {
 }
 
 export const addProductToCart = async (req, res) => {
-    // se requiere id de carrito y del producto, y cantidad
-    // es lo que le voy a pasar del front
     const { pid, quantity } = req.body
-
-    // req.PARAMS porque lo paso en la url
     const { id: cid } = req.params
 
     try {
-        // populate => trae los datos completos del producto
         const cart = await cartDao.getById(cid)
-        // .populate("products.product") - ERROR CON POPULATE A REVISAR 2503250446
 
         if (!cart) {
             return res.status(404).json({ message: "Carrito no encontrado." })
         }
 
-        // se busca el producto por si index
+        const product = await productDao.getById(pid)
+        if (!product) {
+            return res.status(404).json({ message: "Producto no encontrado." })
+        }
+
+        if (product.stock < quantity) {
+            return res.status(400).json({ message: "Stock insuficiente." })
+        }
+
         const productIndex = cart.products.findIndex(p => p.product.toString() === pid)
 
-        // si el producto existe, aumentar la cantidad
         if (productIndex !== -1) {
             cart.products[productIndex].quantity += quantity
         } else {
-            // si no existe, se agrega
             cart.products.push({ product: pid, quantity })
         }
+
+        product.stock -= quantity
+
+        await product.save()
 
         await cart.save()
 

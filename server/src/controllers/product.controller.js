@@ -1,10 +1,25 @@
-
 import { productDao } from "../dao/product.dao.js";
 
-export const getPoducts = async (req, res) => {
+export const getProducts = async (req, res) => {
     try {
-        const products = await productDao.getAll()
-        res.json(products)
+        const { page = 1, limit = 9 } = req.query;
+        const pageNumber = parseInt(page);
+        const limitNumber = parseInt(limit);
+
+        const products = await productDao.getAll();
+
+        const totalPages = Math.ceil(products.length / limitNumber);
+
+        const startIndex = (pageNumber - 1) * limitNumber;
+        const endIndex = startIndex + limitNumber;
+
+        const paginatedProducts = products.slice(startIndex, endIndex);
+
+        res.json({
+            payload: paginatedProducts,
+            totalPages,
+            page: pageNumber
+        });
     } catch (err) {
         res.status(500).json({ message: "Error al obtener productos." })
     }
@@ -33,7 +48,7 @@ export const addProduct = async (req, res) => {
             stock
         })
 
-        res.status(201).json(newProduct)
+        return res.status(200).json({ msg: "Producto agregado: ", newProduct })
     } catch (err) {
         console.error('Error al cargar el producto:', err);
         res.status(500).json({ message: "Error al cargar el producto" });

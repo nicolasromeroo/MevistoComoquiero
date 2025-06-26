@@ -19,6 +19,16 @@ const productSchema = new Schema({
         type: Number,
         required: true
     },
+    imagen: {
+        type: String,
+        required: true
+    },
+    catalogIds: [
+        {
+            type: mongoose.Schema.Types.ObjectId, ref: 'Card'
+
+        }
+    ]
 })
 
 const Product = mongoose.model("Product", productSchema, productCollection)

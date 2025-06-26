@@ -8,7 +8,7 @@ export const generateToken = (user) => {
     const payload = {
         id: user._id,
         username: user.username,
-        email: user.email
+        role: user.role
     }
 
     // expiracion de 1 hora
